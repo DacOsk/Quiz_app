@@ -1,0 +1,264 @@
+:root {
+    font-size: 62.55%;
+}
+
+:root {
+    --font: sans-serif;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fs-h1: 5.4rem;
+    --fs-h2: 4.2rem;
+    --fs-h3: 2.8rem;
+    --fs-normal: 1.8rem;
+    --clr-base: #56a5eb;
+    --clr-light: #ecf5ff;
+    --clr-gray: #333;
+    --clr-lgray: #aaa;
+    --clr-red: #dc3545;
+    --clr-green: #28a745;
+    --box-shadow: 0 .4rem 1.4rem 0 rgba(86, 185, 235, .5);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--clr-gray);
+}
+
+html {
+    background-color: var(--clr-light);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    color: var(--clr-base);
+    margin-bottom: 5rem;
+}
+
+h1>span {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-normal);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    margin-bottom: 4rem;
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-normal);
+}
+
+
+/* Utilities */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container>* {
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Buttons */
+
+.btn {
+    font-size: var(--fs-normal);
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: .1rem solid var(--clr-base);
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: var(--clr-base);
+    background-color: #fff;
+}
+
+.btn[disabled] {
+    border: 1px solid var(--clr-red);
+    color: var(--clr-lgray);
+    text-decoration: line-through;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transform: translateY(-.1rem);
+    transition: transform 150ms;
+}
+
+.btn:focus,
+input:focus {
+    outline: transparent;
+}
+
+.btn:active {
+    transform: translateY(.1rem);
+    transition: transform 150ms;
+    outline: none;
+}
+
+
+/* Forms */
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-family: inherit;
+    font-size: var(--fs-normal);
+    color: var(--clr-gray);
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+
+input::placeholder,
+label {
+    color: var(--clr-lgray);
+}
+
+input:invalid {
+    border: 1px solid var(--clr-red);
+}
+
+
+/* test choices */
+
+.choice-container {
+    display: flex;
+    margin-bottom: .5rem;
+    width: 100%;
+    font-size: var(--fs-normal);
+    border: .1rem solid rgb(86, 165, 235, .25);
+    background-color: #fff;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transform: translateY(-.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: var(--clr-base);
+    color: #fff;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.correct {
+    background-color: var(--clr-green);
+}
+
+.incorrect {
+    background-color: var(--clr-red);
+}
+
+
+/* HUD */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progress-bar {
+    width: 20rem;
+    height: 4rem;
+    border: .3rem solid var(--clr-base);
+    margin-top: .7rem;
+}
+
+.progress-bar-full {
+    height: 3.5rem;
+    background-color: var(--clr-base);
+    width: 0%
+}
+
+
+/* High Score */
+
+#high-scores-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: .5rem;
+    cursor: default;
+}
+
+.high-score:hover {
+    transform: scale(1.025);
+}

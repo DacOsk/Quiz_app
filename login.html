@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-center flex-column">
+            <h1>Prijava</h1>
+            <form id="login">
+                <label for="user-name">min. 4 znaka, slova ili brojke, razmak i podcrta</label>
+                <input type="text" name="name" id="user-name" placeholder="Korisničko ime" required minlength="4" pattern="([a-z]|[A-Z]|\d|[_ šđčćžŠĐČĆŽ]){4,}">
+                <label for="user-password">5-12 znakova, slova ili brojke i podcrta</label>
+                <input type="password" name="password" id="user-password" placeholder="Lozinka" required minlength="5" maxlength="12" pattern="([a-z]|[A-Z]|\d|[_šđčćžŠĐČĆŽ]){5,12}">
+                <button id="submit" type="submit" class="btn">Prijava</button>
+            </form>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
